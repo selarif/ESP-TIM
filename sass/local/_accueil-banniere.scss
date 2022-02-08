@@ -1,0 +1,52 @@
+/*-------------------------------------------
+  Style de la bannière de la page d'accueil
+--------------------------------------------- */
+
+.titres {
+    color: #23211e;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10vh;
+    text-transform: uppercase;
+    left: 0;
+
+    h1 {
+        margin: 0;
+        width: max-content;
+    }
+
+    // Le premier titre. Mon nom.
+    .nom {
+        font-family: 'EB Garamond', serif;
+        font-size: 7em;
+
+        div:nth-child(1) {
+            display: inline-block;
+            animation: anim-titre1a 30s linear infinite;
+        }
+
+        div:nth-child(2) {
+            display: inline-block;
+            animation: anim-titre1b 30s linear infinite;
+            animation-delay: 15s;
+        }
+    }
+
+    // Le deuxième titre. Titre du projet.
+    .projet {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 8em; 
+
+        div:nth-child(1) {
+            display: inline-block;
+            animation: anim-titre1a 30s linear infinite;
+        }
+
+        div:nth-child(2) {
+            display: inline-block;
+            animation: anim-titre1b 30s linear infinite;
+            animation-delay: 15s;
+        }
+    }
+}
