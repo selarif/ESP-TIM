@@ -1,8 +1,9 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
-  slidesPerView : 3,
   loop: true,
+  clickable: true,
+  dynamicBullets: true,
 
   // If we need pagination
   pagination: {
@@ -23,6 +24,7 @@ const swiper = new Swiper('.swiper', {
 
 		800: {
 			slidesPerView: 3,
+      spaceBetween: 50,
 		},
 	},
 });

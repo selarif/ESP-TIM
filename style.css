@@ -109,6 +109,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .capture {
   width: 100%;
+  margin-bottom: 10vh;
 }
 
 .capture .capture-contenant {
@@ -128,6 +129,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-family: 'EB Garamond', serif;
   font-size: 2em;
   text-align: center;
+}
+
+.capture .capture-contenant p {
+  font-size: 1.5em;
+  border-left: 7px solid #332f22;
+  padding-left: 10px;
 }
 
 .site-footer {
@@ -163,8 +170,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   Le carrousel du site web
 --------------------------------------------- */
 .swiper {
-  width: 600px;
-  height: 300px;
+  width: 80vw;
+  height: auto;
+  margin-bottom: 10vh;
+  position: relative;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+  width: 20vw;
+}
+
+.swiper .swiper-wrapper .swiper-slide img {
+  border-radius: 15px;
+  width: 25vw;
+  height: 35vh;
+  object-fit: cover;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #23211e;
+}
+
+.swiper .swiper-button-prev::after, .swiper .swiper-button-next::after {
+  font-weight: 900;
+  font-size: 4rem;
+  color: #23211e;
 }
 
 /* local/général

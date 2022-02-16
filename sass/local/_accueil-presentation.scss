@@ -38,6 +38,7 @@
 
 .capture {
     width: 100%;
+    margin-bottom: 10vh;
 
     .capture-contenant {
         width: 90%;
@@ -58,6 +59,12 @@
             font-family: 'EB Garamond', serif;
             font-size: 2em;
             text-align: center;
+        }
+
+        p {
+            font-size: 1.5em;
+            border-left: 7px solid #332f22;
+            padding-left: 10px;
         }
     }
 }

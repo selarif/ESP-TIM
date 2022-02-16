@@ -52,39 +52,43 @@ get_header();
 			endwhile; 
 		?>
 
+		<?php
+			while ( have_posts() ) :
+				the_post(); 
+				if(get_field('type-article') == "capture-principale"):
+		?>	
 			<div class="capture">
 				<div class="capture-contenant">
 					<div class="img-capture">
-						<img src="<?php echo site_url().'/wp-content/uploads/2022/02/img-defaut.png';?>" alt="">
+						<?php the_post_thumbnail( 'large'); ?>
 					</div>
-					<h2>Capture d'écran du projet de recherche <cite>Mais qu'est-ce qu'on a fait de Poséidon ?</cite></h2>
+					<h2><?php the_title() ?></h2>
+					<p> <?php the_content(); ?> </p>
 				</div>
 				
 			</div>
-
+		<?php
+				endif; 
+			endwhile; 
+		?>
 			<div class="swiper">
 				<div class="swiper-wrapper">
-					<!-- Slides -->
-					<div class="swiper-slide">
-						<img src="<?php echo site_url().'/wp-content/uploads/2022/02/img-defaut.png';?>" alt="">
-					</div>
-					<div class="swiper-slide">
-						<img src="<?php echo site_url().'/wp-content/uploads/2022/02/img-defaut.png';?>" alt="">
-					</div>
-					<div class="swiper-slide">
-						<img src="<?php echo site_url().'/wp-content/uploads/2022/02/img-defaut.png';?>" alt="">
-					</div>
-					<div class="swiper-slide">
-						<img src="<?php echo site_url().'/wp-content/uploads/2022/02/img-defaut.png';?>" alt="">
-					</div>
-					<div class="swiper-slide">
-						<img src="<?php echo site_url().'/wp-content/uploads/2022/02/img-defaut.png';?>" alt="">
+					<?php
+						while ( have_posts() ) :
+							the_post(); 
+							if(get_field('type-article') == "avancement"): 
+					
+							get_template_part( 'template-parts/content', 'accueil-avancement' );
+
+							endif; 
+						endwhile; 
+						?>	
 					</div>
 				</div>
 				<!-- La pagination (les pastilles au pied du carrousel) -->
 				<div class="swiper-pagination"></div>
 
-				<!-- Les boutons -->
+				<!-- Les flèches de navigation -->
 				<div class="swiper-button-prev"></div>
 				<div class="swiper-button-next"></div>
 			</div>
