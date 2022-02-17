@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/*!
+Theme Name: esp
+Theme URI: http://underscores.me/
+Author: El Arif Sami
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: esp
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+esp is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/* Local/accueil
+--------------------------------------------- */
+/*-------------------------------------------
+  Style de la bannière de la page d'accueil
+--------------------------------------------- */
+.titres {
+  color: #23211e;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 10vh;
+  text-transform: uppercase;
+  left: 0;
+}
+
+.titres h1 {
+  margin: 0;
+  width: max-content;
+}
+
+.titres .nom {
+  font-family: 'EB Garamond', serif;
+  font-size: 7em;
+}
+
+.titres .nom div:nth-child(1) {
+  display: inline-block;
+  animation: anim-titre1a 30s linear infinite;
+}
+
+.titres .nom div:nth-child(2) {
+  display: inline-block;
+  animation: anim-titre1b 30s linear infinite;
+  animation-delay: 15s;
+}
+
+.titres .projet {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 8em;
+}
+
+.titres .projet div:nth-child(1) {
+  display: inline-block;
+  animation: anim-titre1a 30s linear infinite;
+}
+
+.titres .projet div:nth-child(2) {
+  display: inline-block;
+  animation: anim-titre1b 30s linear infinite;
+  animation-delay: 15s;
+}
+
+/* local/accueil-presentation
+--------------------------------------------- */
+/*-------------------------------------------
+  Style de la strat de présentation de la page d'accueil
+--------------------------------------------- */
+.presentation {
+  width: 100%;
+}
+
+.presentation .presentation-contenant {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.presentation .presentation-contenant .texte-presentation {
+  font-size: 1.5em;
+  text-align: right;
+  margin: 1em;
+  line-height: 1.3;
+}
+
+.presentation .presentation-contenant .texte-presentation h2 {
+  font-family: 'EB Garamond', serif;
+}
+
+.presentation .presentation-contenant .portrait img {
+  width: 25vw;
+  object-fit: contain;
+}
+
+.capture {
+  width: 100%;
+  margin-bottom: 10vh;
+}
+
+.capture .capture-contenant {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.capture .capture-contenant .img-capture img {
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+.capture .capture-contenant h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+.capture .capture-contenant p {
+  font-size: 1.5em;
+  border-left: 7px solid #332f22;
+  padding-left: 10px;
+}
+
+.site-footer {
+  background-color: #181610;
+}
+
+/* local/animations
+--------------------------------------------- */
+/*-------------------------------------------
+  Les animations du site web
+--------------------------------------------- */
+@keyframes anim-titre1a {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes anim-titre1b {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+/* local/carrousel
+--------------------------------------------- */
+/*-------------------------------------------
+  Le carrousel du site web
+--------------------------------------------- */
+.swiper {
+  width: 80vw;
+  height: auto;
+  margin-bottom: 10vh;
+  position: relative;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+  width: 20vw;
+}
+
+.swiper .swiper-wrapper .swiper-slide img {
+  border-radius: 15px;
+  width: 25vw;
+  height: 35vh;
+  object-fit: cover;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #23211e;
+}
+
+.swiper .swiper-button-prev::after, .swiper .swiper-button-next::after {
+  font-weight: 900;
+  font-size: 4rem;
+  color: #23211e;
+}
+
+/* local/général
+--------------------------------------------- */
+/*-------------------------------------------
+  Styles générales
+--------------------------------------------- */
+body {
+  background-color: #d4cbbe;
+  margin: 0 auto;
+  background-repeat: repeat repeat;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #23211e;
+}
+
+/* Abstracts/abstracts
+-------------------------------------------- */
+/*# sourceMappingURL=style.css.map */
