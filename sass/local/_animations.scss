@@ -1,0 +1,28 @@
+/*-------------------------------------------
+  Les animations du site web
+--------------------------------------------- */
+
+@keyframes anim-titre1a {
+
+    0% {
+        transform: translateX(100%);
+  
+    }
+
+    100% {
+        transform: translateX(-100%);
+     
+    }
+}
+
+@keyframes anim-titre1b {
+
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+

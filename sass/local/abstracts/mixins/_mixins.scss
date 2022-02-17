@@ -1,0 +1,28 @@
+// Les medias queries
+$largeur_grand_desktop: 1400px;
+$largeur_desktop : 1200px;
+$largeur_tablet : 800px;
+$largeur_small_tablet : 700px;
+@mixin grand_desktop {
+	@media (min-width: $largeur_grand_desktop ){
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: $largeur_desktop ){
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: $largeur_tablet ){
+		@content;
+	}
+}
+
+@mixin small_tablet {
+	@media (min-width: $largeur_small_tablet ){
+		@content;
+	}
+}
