@@ -83,7 +83,6 @@ get_header();
 							endif; 
 						endwhile; 
 						?>	
-					</div>
 				</div>
 				<!-- La pagination (les pastilles au pied du carrousel) -->
 				<div class="swiper-pagination"></div>
