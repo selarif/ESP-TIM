@@ -1,21 +1,29 @@
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
+  // Style de carroussel
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 30,
+    slideShadows: false,
+  },
+
+  // Paramètres supplémentaires
   direction: 'horizontal',
   loop: true,
   clickable: true,
   dynamicBullets: true,
 
-  // If we need pagination
+  // Pagination
   pagination: {
     el: '.swiper-pagination',
   },
 
-  // Navigation arrows
+  // Flèches de navigation
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
+  // Media Queries 
   breakpoints: {
 
 		600: {
