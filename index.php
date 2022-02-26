@@ -36,14 +36,17 @@ get_header();
 				the_post(); 
 				if(get_field('type-article') == "presentation"):
 		?>	
-			<div class="presentation">
+			<div class="presentation js-defilement">
 				<div class="presentation-contenant">
-					<div class="texte-presentation">
+					<div class="texte-presentation transition-gauche">
 						<h2><?php the_title() ?></h2>
 						<p> <?php the_content(); ?> </p>
 					</div>
-					<div class="portrait">
-						<?php the_post_thumbnail( 'large'); ?>	
+					<div class="portrait transition-droite">
+						<a href="https://www.artstation.com/sami_elarif" target="_blank">
+							<?php the_post_thumbnail( 'large'); ?>	
+							<span>Mon ArtStation</span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -57,11 +60,13 @@ get_header();
 				the_post(); 
 				if(get_field('type-article') == "capture-principale"):
 		?>	
-			<div class="capture">
+
+			<div class="parallax js-defilement" style="background-image: url('http://localhost/esp/wp-content/uploads/2022/02/7.1-min.png');"></div>
+			<div class="capture js-defilement" >
 				<div class="capture-contenant">
-					<div class="img-capture">
+					<!-- <div class="img-capture">
 						<?php the_post_thumbnail( 'large'); ?>
-					</div>
+					</div> -->
 					<h2><?php the_title() ?></h2>
 					<p> <?php the_content(); ?> </p>
 				</div>
@@ -71,7 +76,7 @@ get_header();
 				endif; 
 			endwhile; 
 		?>
-			<div class="swiper">
+			<div class="swiper js-defilement">
 				<div class="swiper-wrapper">
 					<?php
 						while ( have_posts() ) :
@@ -91,6 +96,8 @@ get_header();
 				<div class="swiper-button-prev"></div>
 				<div class="swiper-button-next"></div>
 			</div>
+
+			<div class="parallax js-defilement" style="background-image: url('http://localhost/esp/wp-content/uploads/2022/02/4.1-min.png');"></div>
 			<?php
 			/* Start the Loop */
 			// while ( have_posts() ) :

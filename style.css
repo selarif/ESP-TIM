@@ -28,7 +28,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   Style de la bannière de la page d'accueil
 --------------------------------------------- */
 .titres {
-  color: #23211e;
+  color: #23211e !important;
   width: 100%;
   overflow: hidden;
   padding-top: 10vh;
@@ -81,10 +81,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 .presentation {
   width: 100%;
+  margin-bottom: 10vh;
 }
 
 .presentation .presentation-contenant {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -96,15 +97,57 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   text-align: right;
   margin: 1em;
   line-height: 1.3;
+  color: #23211e;
 }
 
 .presentation .presentation-contenant .texte-presentation h2 {
   font-family: 'EB Garamond', serif;
 }
 
+.presentation .presentation-contenant .portrait {
+  width: 80em;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.presentation .presentation-contenant .portrait a {
+  text-decoration: none;
+}
+
+.presentation .presentation-contenant .portrait a:hover span {
+  transform: translateY(-200px);
+}
+
 .presentation .presentation-contenant .portrait img {
-  width: 25vw;
   object-fit: contain;
+  transition: all 0.6s ease;
+}
+
+.presentation .presentation-contenant .portrait img:hover {
+  filter: blur(9px);
+  -webkit-filter: blur(9px);
+  -moz-filter: blur(9px);
+}
+
+.presentation .presentation-contenant .portrait span {
+  display: block;
+  transform: translateY(100px);
+  transition: 0.2s;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #eee0cc;
+  text-align: center;
+  background-color: #23211e;
+  padding: 1rem;
+}
+
+.parallax {
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .capture {
@@ -133,12 +176,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .capture .capture-contenant p {
   font-size: 1.5em;
-  border-left: 7px solid #332f22;
+  border-left: 7px solid #332f22 !important;
   padding-left: 10px;
 }
 
 .site-footer {
   background-color: #181610;
+}
+
+.js-defilement {
+  opacity: 0 !important;
+  transition: opacity 3s;
+}
+
+.js-defile {
+  opacity: 1 !important;
+}
+
+.js-defile .transition-gauche {
+  animation: transition-gauche 1.3s forwards;
+  animation-timing-function: ease;
+}
+
+.js-defile .transition-droite {
+  animation: transition-droite 1.3s forwards;
+  animation-timing-function: ease;
 }
 
 /* local/animations
@@ -161,6 +223,24 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   }
   100% {
     transform: translateX(-200%);
+  }
+}
+
+@keyframes transition-gauche {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes transition-droite {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -215,4 +295,7 @@ p {
 
 /* Abstracts/abstracts
 -------------------------------------------- */
+/* -----------------
+	Les couleurs
+-------------------- */
 /*# sourceMappingURL=style.css.map */
