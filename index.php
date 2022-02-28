@@ -36,7 +36,7 @@ get_header();
 				the_post(); 
 				if(get_field('type-article') == "presentation"):
 		?>	
-			<div class="presentation js-defilement">
+			<div id="presentation" class="presentation js-defilement">
 				<div class="presentation-contenant">
 					<div class="texte-presentation transition-gauche">
 						<h2><?php the_title() ?></h2>
@@ -61,7 +61,8 @@ get_header();
 				if(get_field('type-article') == "capture-principale"):
 		?>	
 
-			<div class="parallax js-defilement" style="background-image: url('http://localhost/esp/wp-content/uploads/2022/02/7.1-min.png');"></div>
+			<div class="parallax js-defilement transition-hauteur" style="background-image: url('http://localhost/esp/wp-content/uploads/2022/02/7.1-min.png');"></div>
+
 			<div class="capture js-defilement" >
 				<div class="capture-contenant">
 					<!-- <div class="img-capture">
@@ -98,6 +99,19 @@ get_header();
 			</div>
 
 			<div class="parallax js-defilement" style="background-image: url('http://localhost/esp/wp-content/uploads/2022/02/4.1-min.png');"></div>
+
+			<article class="lien-projet" id="lien-projet" >
+				<img src="http://localhost/esp/wp-content/uploads/2022/02/10-min.png" alt="">
+				<div class="contenu-lien-projet">
+					<h3>Visionnez le cours-métrage dès maintenant !</h3>
+					<!-- <img src="http://localhost/esp/wp-content/uploads/2022/02/10-min.png" alt="Statue de Poseidon sur une mer déchainée."> -->
+				</div>
+			</article>
+
+			<div class="etapes">
+				<h2>Étapes du projet</h2>
+			</div>
+			
 			<?php
 			/* Start the Loop */
 			// while ( have_posts() ) :

@@ -4,49 +4,56 @@
 
 .titres {
     color: #23211e !important;
-    width: 100%;
+    width: 97%;
     overflow: hidden;
     padding-top: 10vh;
     text-transform: uppercase;
     left: 0;
+    margin: 0 auto;
 
     h1 {
         margin: 0;
-        width: max-content;
     }
 
     // Le premier titre. Mon nom.
     .nom {
         font-family: 'EB Garamond', serif;
         font-size: 7em;
+        animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both, slide-gauche 3s 1s ease both;
 
-        div:nth-child(1) {
-            display: inline-block;
-            animation: anim-titre1a 30s linear infinite;
-        }
+        // div:nth-child(1) {
+        //     display: inline-block;
+        //     animation: anim-titre1a 30s linear infinite;
+        // }
 
-        div:nth-child(2) {
-            display: inline-block;
-            animation: anim-titre1b 30s linear infinite;
-            animation-delay: 15s;
-        }
+        // div:nth-child(2) {
+        //     display: inline-block;
+        //     animation: anim-titre1b 30s linear infinite;
+        //     animation-delay: 15s;
+        // }
     }
 
     // Le deuxième titre. Titre du projet.
     .projet {
+        animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both, slide-droite 1.5s 1s ease both;
+        animation-delay: 2s;
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
         font-size: 8em; 
+        line-height: .9;
+        text-align: right;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-font-smoothing: antialiased;
 
-        div:nth-child(1) {
-            display: inline-block;
-            animation: anim-titre1a 30s linear infinite;
-        }
+        // div:nth-child(1) {
+        //     display: inline-block;
+        // }
 
-        div:nth-child(2) {
-            display: inline-block;
-            animation: anim-titre1b 30s linear infinite;
-            animation-delay: 15s;
-        }
+        // div:nth-child(2) {
+        //     display: inline-block;
+        //     animation: anim-titre1b 30s linear infinite;
+        //     animation-delay: 15s;
+        // }
     }
 }

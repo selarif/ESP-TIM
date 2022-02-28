@@ -29,49 +29,35 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 .titres {
   color: #23211e !important;
-  width: 100%;
+  width: 97%;
   overflow: hidden;
   padding-top: 10vh;
   text-transform: uppercase;
   left: 0;
+  margin: 0 auto;
 }
 
 .titres h1 {
   margin: 0;
-  width: max-content;
 }
 
 .titres .nom {
   font-family: 'EB Garamond', serif;
   font-size: 7em;
-}
-
-.titres .nom div:nth-child(1) {
-  display: inline-block;
-  animation: anim-titre1a 30s linear infinite;
-}
-
-.titres .nom div:nth-child(2) {
-  display: inline-block;
-  animation: anim-titre1b 30s linear infinite;
-  animation-delay: 15s;
+  animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both, slide-gauche 3s 1s ease both;
 }
 
 .titres .projet {
+  animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both, slide-droite 1.5s 1s ease both;
+  animation-delay: 2s;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 8em;
-}
-
-.titres .projet div:nth-child(1) {
-  display: inline-block;
-  animation: anim-titre1a 30s linear infinite;
-}
-
-.titres .projet div:nth-child(2) {
-  display: inline-block;
-  animation: anim-titre1b 30s linear infinite;
-  animation-delay: 15s;
+  line-height: .9;
+  text-align: right;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* local/accueil-presentation
@@ -98,10 +84,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   margin: 1em;
   line-height: 1.3;
   color: #23211e;
-}
-
-.presentation .presentation-contenant .texte-presentation h2 {
-  font-family: 'EB Garamond', serif;
 }
 
 .presentation .presentation-contenant .portrait {
@@ -148,6 +130,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 10vh;
 }
 
 .capture {
@@ -169,7 +152,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .capture .capture-contenant h2 {
-  font-family: 'EB Garamond', serif;
   font-size: 2em;
   text-align: center;
 }
@@ -178,6 +160,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-size: 1.5em;
   border-left: 7px solid #332f22 !important;
   padding-left: 10px;
+}
+
+.lien-projet {
+  position: relative;
+  display: block;
+  height: 30vh;
+  width: 50vh;
+  margin: 0 auto;
+  transition: box-shadow 0.1s, transform 0.1s;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.lien-projet:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.lien-projet h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  font-weight: 500;
+  color: #111c3a;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .site-footer {
@@ -203,26 +211,40 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   animation-timing-function: ease;
 }
 
+.transition-hauteur {
+  animation: text-clip 1s 1s;
+  animation-timing-function: ease;
+}
+
 /* local/animations
 --------------------------------------------- */
 /*-------------------------------------------
   Les animations du site web
 --------------------------------------------- */
-@keyframes anim-titre1a {
+@keyframes slide-gauche {
   0% {
-    transform: translateX(100%);
+    transform: translateX(50%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(0);
   }
 }
 
-@keyframes anim-titre1b {
+@keyframes slide-droite {
   0% {
-    transform: translateX(0%);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
@@ -241,6 +263,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes bas-1 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: rotate(0deg) translateY(100%) translateX(-50%) scaleX(1);
+  }
+  100% {
+    transform: rotate(45deg) scaleX(2);
   }
 }
 
@@ -277,6 +311,74 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   color: #23211e;
 }
 
+/* local/navigation
+-------------------------------------------- */
+/*-------------------------------------------
+  La navigation du site web
+--------------------------------------------- */
+.menu-icon {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: flex-end;
+}
+
+.menu-icon span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: #182B25;
+  transition: all .3s;
+  margin: 8% 0;
+}
+
+.menu-icon span:nth-child(2) {
+  width: 50%;
+}
+
+.menu-principal {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  background-color: #c8d9b8;
+  padding-top: 10%;
+}
+
+.menu-principal ul {
+  list-style: none;
+  width: 90%;
+  text-align: right;
+}
+
+.menu-principal ul li {
+  padding: 4px 0;
+}
+
+.menu-principal ul li a {
+  text-decoration: none;
+  color: #182B25;
+}
+
+.menu-principal ul li a:hover {
+  border-bottom: 3px solid #182B25;
+}
+
+.actif .menu-principal {
+  display: block;
+}
+
+.actif .menu-icon span:nth-child(2) {
+  animation: ease .7s bas-1 forwards;
+}
+
 /* local/général
 --------------------------------------------- */
 /*-------------------------------------------
@@ -291,6 +393,10 @@ body {
 p {
   font-family: 'Josefin Sans', sans-serif;
   color: #23211e;
+}
+
+h2 {
+  font-family: 'EB Garamond', serif;
 }
 
 /* Abstracts/abstracts

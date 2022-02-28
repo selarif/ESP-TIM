@@ -20,10 +20,6 @@
             margin: 1em;
             line-height: 1.3;
             color: #23211e;
-
-            h2 {
-                font-family: 'EB Garamond', serif;
-            }
         }
 
         .portrait {
@@ -77,6 +73,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 10vh;
 }
 
 .capture {
@@ -99,7 +96,6 @@
         }
 
         h2 {
-            font-family: 'EB Garamond', serif;
             font-size: 2em;
             text-align: center;
         }
@@ -109,6 +105,33 @@
             border-left: 7px solid #332f22 !important;
             padding-left: 10px;
         }
+    }
+}
+
+// Image avec l'effet de survol 3D. 
+.lien-projet {
+    position: relative;
+    display: block;
+    height: 30vh;
+    width: 50vh;
+    margin: 0 auto;
+    transition: box-shadow 0.1s, transform 0.1s;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+    &:hover {
+        box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
+        cursor: pointer;
+    }    
+
+    h3 {
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+        font-weight: 500;
+        color: #111c3a;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 }
 
@@ -134,4 +157,9 @@
         animation: transition-droite 1.3s forwards;
         animation-timing-function: ease;
     }
+}
+
+.transition-hauteur {
+    animation: text-clip 1s 1s;
+    animation-timing-function: ease;
 }
