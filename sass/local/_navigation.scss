@@ -3,18 +3,22 @@
 --------------------------------------------- */
 
 .menu-icon {
-  position: absolute;
+  position: fixed;
+  z-index: 6;
   top: 10%;
   left: 90%;
   transform: translate(-50%, -50%);
   width: 70px;
   // height: 100px;
-  height: auto;
+  height: 70px;
+  padding: 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
   align-items: flex-end;
+  background-color: #c8d9b8;
+  border-radius: 100%;
 
   span {
     position: relative;
@@ -24,6 +28,12 @@
     background: #182B25;
     transition: all .3s;
     margin: 8% 0;
+    transition: .25s ease-in-out;
+    transform: rotate(0deg);
+
+    &:nth-child(1) {
+
+    }
 
     &:nth-child(2) {
       width: 50%;
@@ -32,20 +42,38 @@
 }
 
 .menu-principal {
-  //display: none;
+  position: fixed;
+  height: 23vh;
+  z-index: 5;
+  width: 100%;
+  opacity: 0;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   font-size: 1.3rem;
   background-color: #c8d9b8;
-  padding-top: 10%;
+  padding-top: 12vh;
+  transition: .25s ease-in-out;
+  max-height: 0;
+  -webkit-box-shadow: 0px 0px 42px 11px rgba(0,0,0,0.52); 
+  box-shadow: 0px 0px 42px 11px rgba(0,0,0,0.52);
 
   ul {
     list-style: none;
     width: 90%;
     text-align: right;
+    transition: .45s ease-in-out;
+    z-index: 5;
 
     li {
       padding: 4px 0;
+      position: relative;
+
+      i {
+        position: absolute;
+        margin-left: 5px;
+        color: #182B25;
+
+      }
       
       a {
         text-decoration: none;
@@ -62,14 +90,30 @@
 .actif {
 
   .menu-principal {
-    display: block;
+    opacity: 1;
+    max-height: fit-content;
+
+    ul {
+      opacity: 1;
+      transition: .15s ease-in-out;
+    }
   }
 
   .menu-icon {
+    background: none;
+
     span {
 
+      &:nth-child(1) {
+        top: 7px;
+        transform: rotate(-45deg);
+      }
+
       &:nth-child(2) {
-        animation: ease .7s bas-1 forwards;
+        //animation: ease .7s bas-1 forwards;
+        width: 100%;
+        transform: rotate(45deg);
+        top: -15px;
       }
     }
   }

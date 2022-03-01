@@ -55,14 +55,13 @@ get_header();
 			endwhile; 
 		?>
 
+		<div class="parallax js-defilement transition-hauteur" style="background-image: url('http://localhost/esp/wp-content/uploads/2022/02/7.1-min.png');"></div>
+
 		<?php
 			while ( have_posts() ) :
 				the_post(); 
 				if(get_field('type-article') == "capture-principale"):
 		?>	
-
-			<div class="parallax js-defilement transition-hauteur" style="background-image: url('http://localhost/esp/wp-content/uploads/2022/02/7.1-min.png');"></div>
-
 			<div class="capture js-defilement" >
 				<div class="capture-contenant">
 					<!-- <div class="img-capture">
@@ -100,7 +99,7 @@ get_header();
 
 			<div class="parallax js-defilement" style="background-image: url('http://localhost/esp/wp-content/uploads/2022/02/4.1-min.png');"></div>
 
-			<article class="lien-projet" id="lien-projet" >
+			<article class="lien-projet js-defilement" id="lien-projet" >
 				<img src="http://localhost/esp/wp-content/uploads/2022/02/10-min.png" alt="">
 				<div class="contenu-lien-projet">
 					<h3>Visionnez le cours-métrage dès maintenant !</h3>
@@ -108,8 +107,31 @@ get_header();
 				</div>
 			</article>
 
-			<div class="etapes">
-				<h2>Étapes du projet</h2>
+			<div id="inspiration" class="inspiration js-defilement">
+				<div class="inspiration-contenant">
+					<h2>Les inspirations du projet</h2>
+						<div class="inspiration-liste">
+							<div class="inspiration-item">
+								<?php
+									while ( have_posts() ) :
+									the_post(); 
+									if(get_field('type-article') == "inspiration"): 
+								?>	
+									<div class="inspiration-image">
+										<?php the_post_thumbnail( 'large'); ?>
+									</div>
+									<div class="inspiration-texte">
+										<h3><?php the_title() ?></h3>
+										<p> <?php the_content(); ?> </p>
+									</div>
+								<?php
+									endif; 
+									endwhile; 
+								?>	
+							</div>
+						</div>
+					
+				</div>
 			</div>
 			
 			<?php

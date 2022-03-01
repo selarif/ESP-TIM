@@ -27,6 +27,8 @@
 	<link rel="manifest" href="<?php echo site_url().'/wp-content/uploads/2022/02/site.webmanifest';?>">
 	<!-- Swiper API -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/329a0d8f65.js" crossorigin="anonymous"></script>
 	
 	<?php wp_head(); ?>
 </head>
@@ -64,12 +66,13 @@
 			<!-- La navigation du site web -->
 			<nav class="menu-principal">
 				<ul>
-					<li><a href="#presentation">Presentation</a></li>
+					<li><a href="#presentation">Un peu sur moi</a></li>
 					<li><a href="#lien-projet">Le court-métrage</a></li>
-					<li><a href="https://www.behance.net/Sami-El-Arif" target="_blank">Mon Behance</a></li>
-					<li><a href="https://www.artstation.com/sami_elarif" target="_blank">Mon ArtStation</a></li>
-					<li><a href="https://www.linkedin.com/in/elarifsami/" target="_blank">Mon Linkedin</a></li>
-					<li><a href=""></a></li>
+					<li><a href="#inspiration">Mes inspirations</a></li>
+					<li><a href="https://www.behance.net/Sami-El-Arif" target="_blank">Mon Behance</a><i class="fa-brands fa-behance-square"></i></li>
+					<li><a href="https://www.artstation.com/sami_elarif" target="_blank">Mon ArtStation</a><i class="fa-brands fa-artstation"></i></li>
+					<li><a href="https://www.linkedin.com/in/elarifsami/" target="_blank">Mon Linkedin</a><i class="fa-brands fa-linkedin"></i></li>
+					
 				</ul>
 			</nav>
 

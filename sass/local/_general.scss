@@ -3,7 +3,8 @@
 --------------------------------------------- */
 
 body {
-  background-color: #d4cbbe;
+  background: rgb(45,80,81);
+  background: linear-gradient(180deg, rgba(45,80,81,1) 0%, rgba(212,203,190,1) 100%);
   margin: 0 auto;
   background-repeat: repeat repeat;
 }
@@ -13,6 +14,7 @@ p {
   color: #23211e;
 }
 
-h2 {
+h2,h3,h4,h5 {
   font-family: 'EB Garamond', serif;
+  color: #23211e;
 }

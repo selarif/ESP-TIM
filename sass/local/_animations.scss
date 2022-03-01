@@ -61,11 +61,19 @@
         transform: translateY(0) translateX(0);
     }
 
+    25% {
+        transform: translateY(100%);
+    }
+
     50% {
-        transform: rotate(0deg) translateY(100%) translateX(-50%) scaleX(1) ;
+        transform: translateX(-50%) scaleX(1) ;
+    }
+
+    75% {
+        transform: translateX(-50%) rotate(0deg) scaleX(2);
     }
 
     100% {
-        transform: rotate(45deg) scaleX(2) ;
+        transform: translateX(-50%)  rotate(45deg);
     }
 }

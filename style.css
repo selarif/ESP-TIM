@@ -173,7 +173,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background-repeat: no-repeat;
 }
 
-.lien-projet:hover {
+.lien-projet img {
+  border-radius: 20px;
+}
+
+.lien-projet:hover img {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
   cursor: pointer;
 }
@@ -270,11 +274,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   0% {
     transform: translateY(0) translateX(0);
   }
+  25% {
+    transform: translateY(100%);
+  }
   50% {
-    transform: rotate(0deg) translateY(100%) translateX(-50%) scaleX(1);
+    transform: translateX(-50%) scaleX(1);
+  }
+  75% {
+    transform: translateX(-50%) rotate(0deg) scaleX(2);
   }
   100% {
-    transform: rotate(45deg) scaleX(2);
+    transform: translateX(-50%) rotate(45deg);
   }
 }
 
@@ -317,17 +327,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   La navigation du site web
 --------------------------------------------- */
 .menu-icon {
-  position: absolute;
+  position: fixed;
+  z-index: 6;
   top: 10%;
   left: 90%;
   transform: translate(-50%, -50%);
   width: 70px;
-  height: auto;
+  height: 70px;
+  padding: 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
   align-items: flex-end;
+  background-color: #c8d9b8;
+  border-radius: 100%;
 }
 
 .menu-icon span {
@@ -338,6 +352,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background: #182B25;
   transition: all .3s;
   margin: 8% 0;
+  transition: .25s ease-in-out;
+  transform: rotate(0deg);
 }
 
 .menu-icon span:nth-child(2) {
@@ -345,21 +361,38 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .menu-principal {
+  position: fixed;
+  height: 23vh;
+  z-index: 5;
+  width: 100%;
+  opacity: 0;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   font-size: 1.3rem;
   background-color: #c8d9b8;
-  padding-top: 10%;
+  padding-top: 12vh;
+  transition: .25s ease-in-out;
+  max-height: 0;
+  box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.52);
 }
 
 .menu-principal ul {
   list-style: none;
   width: 90%;
   text-align: right;
+  transition: .45s ease-in-out;
+  z-index: 5;
 }
 
 .menu-principal ul li {
   padding: 4px 0;
+  position: relative;
+}
+
+.menu-principal ul li i {
+  position: absolute;
+  margin-left: 5px;
+  color: #182B25;
 }
 
 .menu-principal ul li a {
@@ -372,11 +405,28 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .actif .menu-principal {
-  display: block;
+  opacity: 1;
+  max-height: fit-content;
+}
+
+.actif .menu-principal ul {
+  opacity: 1;
+  transition: .15s ease-in-out;
+}
+
+.actif .menu-icon {
+  background: none;
+}
+
+.actif .menu-icon span:nth-child(1) {
+  top: 7px;
+  transform: rotate(-45deg);
 }
 
 .actif .menu-icon span:nth-child(2) {
-  animation: ease .7s bas-1 forwards;
+  width: 100%;
+  transform: rotate(45deg);
+  top: -15px;
 }
 
 /* local/général
@@ -385,7 +435,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   Styles générales
 --------------------------------------------- */
 body {
-  background-color: #d4cbbe;
+  background: #2d5051;
+  background: linear-gradient(180deg, #2d5051 0%, #d4cbbe 100%);
   margin: 0 auto;
   background-repeat: repeat repeat;
 }
@@ -395,8 +446,23 @@ p {
   color: #23211e;
 }
 
-h2 {
+h2, h3, h4, h5 {
   font-family: 'EB Garamond', serif;
+  color: #23211e;
+}
+
+/* local/général
+--------------------------------------------- */
+/* ------------------------------------------------------
+  Style de la section inspiration de la page d'accueil
+------------------------------------------------------ */
+.inspiration {
+  width: 100%;
+}
+
+.inspiration .inspiration-contenant {
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* Abstracts/abstracts
