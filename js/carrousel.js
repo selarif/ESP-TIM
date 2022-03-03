@@ -2,19 +2,19 @@ const swiper = new Swiper('.swiper', {
   // Style de carroussel
   effect: 'coverflow',
   coverflowEffect: {
-    rotate: 30,
+    rotate: 20,
     slideShadows: false,
   },
 
   // Paramètres supplémentaires
   direction: 'horizontal',
   loop: true,
-  clickable: true,
-  dynamicBullets: true,
 
   // Pagination
   pagination: {
     el: '.swiper-pagination',
+    clickable: true, // si on peut cliquer sur les pastilles
+    dynamicBullets: true, // permet d'avoir moins de pastilles. Utile quand le carrousel comporte beaucoup de slides.
   },
 
   // Flèches de navigation
