@@ -26,10 +26,22 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'esp' ), 'esp', '<a href="http://underscores.me/">El Arif Sami</a>' );
 				?>
 		</div>.site-info -->
+		<h1>TIM 2020</h1>
 
 		<div class="contenant-footer">
-			<h1>TIM 2020</h1>
-				<img src="http://localhost/esp/wp-content/uploads/2022/03/Mon-Logo2.png" alt="">
+			<img src="http://localhost/esp/wp-content/uploads/2022/03/Mon-Logo2.png" alt="">
+			<div class="contenu-contact">
+				<h3>Social</h3>
+				<ul>
+					<li><a href="mailto:sami.elarif@hotmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
+					<li><a href="https://www.behance.net/Sami-El-Arif" target="_blank"><i class="fa-brands fa-behance"></i></a></li>
+					<li><a href="https://www.artstation.com/sami_elarif" target="_blank"><i class="fa-brands fa-artstation"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/elarifsami/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+					<li><a href="https://www.instagram.com/samiiii.jpg/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+					<li><a href="https://www.youtube.com/channel/UCB5m0aeQE8nF5b-XhHnTb5g" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+				</ul>
+			</div>
+			
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

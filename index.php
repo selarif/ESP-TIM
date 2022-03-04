@@ -103,7 +103,7 @@ get_header();
 			</div>
 
 			<!-- Le deuxième parallax  -->
-			<div class="parallax js-defilement" style="background-image: url('http://localhost/esp/wp-content/uploads/2022/02/4.1-min.png');"></div>
+			<div class="parallax js-defilement transition-hauteur" style="background-image: url('http://localhost/esp/wp-content/uploads/2022/02/4.1-min.png');"></div>
 
 			<!-- La section lien du projet  -->
 			<article class="lien-projet js-defilement" id="lien-projet" >

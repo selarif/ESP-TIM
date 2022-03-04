@@ -113,8 +113,8 @@
 .lien-projet {
     position: relative;
     display: block;
-    height: 30vh;
-    width: 50vh;
+    height: 40vh;
+    width: 60vh;
     margin: 0 auto;
     transition: box-shadow 0.1s, transform 0.1s;
     background-size: 100%;
@@ -143,9 +143,6 @@
     }
 }
 
-.site-footer {
-    background-color: #181610;
-}
 
 // Classe avec le qui cache le contenu du défilement
 .js-defilement {
