@@ -11,8 +11,9 @@
 
 ?>
 
+	<div class="placeholder"></div>
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+		<!-- <div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'esp' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
@@ -24,7 +25,12 @@
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'esp' ), 'esp', '<a href="http://underscores.me/">El Arif Sami</a>' );
 				?>
-		</div><!-- .site-info -->
+		</div>.site-info -->
+
+		<div class="contenant-footer">
+			<h1>TIM 2020</h1>
+				<img src="http://localhost/esp/wp-content/uploads/2022/03/Mon-Logo2.png" alt="">
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
