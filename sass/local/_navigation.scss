@@ -2,6 +2,7 @@
   La navigation du site web
 --------------------------------------------- */
 
+// L'icône du menu burger
 .menu-icon {
   position: fixed;
   z-index: 6;
@@ -33,10 +34,6 @@
     transition: .25s ease-in-out;
     transform: rotate(0deg);
 
-    &:nth-child(1) {
-
-    }
-
     &:nth-child(2) {
       width: 50%;
     }
@@ -45,7 +42,7 @@
 
 .menu-principal {
   position: fixed;
-  height: 22vh;
+  height: 25vh;
   z-index: -1;
   width: 100%;
   opacity: 0;

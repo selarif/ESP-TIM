@@ -361,7 +361,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .menu-principal {
   position: fixed;
-  height: 22vh;
+  height: 25vh;
   z-index: -1;
   width: 100%;
   opacity: 0;
