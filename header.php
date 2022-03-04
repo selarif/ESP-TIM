@@ -69,7 +69,7 @@
 					<li><a href="#presentation">Un peu sur moi</a></li>
 					<li><a href="#lien-projet">Le court-métrage</a></li>
 					<li><a href="#inspiration">Mes inspirations</a></li>
-					<li><a href="#colophon">Pour me contacter</a></li>
+					<li><a href="#footer-contact">Pour me contacter</a></li>
 					<li><a href="https://www.behance.net/Sami-El-Arif" target="_blank">Mon Behance</a><i class="fa-brands fa-behance-square"></i></li>
 					<li><a href="https://www.artstation.com/sami_elarif" target="_blank">Mon ArtStation</a><i class="fa-brands fa-artstation"></i></li>
 					<li><a href="https://www.linkedin.com/in/elarifsami/" target="_blank">Mon Linkedin</a><i class="fa-brands fa-linkedin"></i></li>

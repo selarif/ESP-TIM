@@ -11,7 +11,6 @@
 
 ?>
 
-	<div class="placeholder"></div>
 	<footer id="colophon" class="site-footer">
 		<!-- <div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'esp' ) ); ?>">
@@ -28,7 +27,7 @@
 		</div>.site-info -->
 		<h1>TIM 2020</h1>
 
-		<div class="contenant-footer">
+		<div id="footer-contact" class="contenant-footer">
 			<img src="http://localhost/esp/wp-content/uploads/2022/03/Mon-Logo2.png" alt="">
 			<div class="contenu-contact">
 				<h3>Social</h3>

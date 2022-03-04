@@ -175,7 +175,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .lien-projet img {
-  border-radius: 20px;
+  border-radius: 20px 0;
 }
 
 .lien-projet:hover img {
