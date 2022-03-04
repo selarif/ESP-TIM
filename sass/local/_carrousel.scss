@@ -3,10 +3,11 @@
 --------------------------------------------- */
 
 .swiper {
-  width: 80vw;
+  width: 85vw;
   height: auto;
   margin-bottom: 10vh;
   position: relative;
+  overflow: hidden;
 
   .swiper-wrapper {
 
@@ -32,9 +33,9 @@
 
   // Les flèches de navigation
   .swiper-button-prev::after, .swiper-button-next::after {
-    font-weight: 900;
+    font-weight: lighter;
     font-size: 4rem;
-    color: #23211e;
+    color: #182B25;
   }
 
   

@@ -2,27 +2,78 @@
   Les animations du site web
 --------------------------------------------- */
 
-@keyframes anim-titre1a {
+// Les animations du header
+@keyframes slide-gauche {
 
     0% {
-        transform: translateX(100%);
+        transform: translateX(50%);
   
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(0);
      
     }
 }
 
-@keyframes anim-titre1b {
+@keyframes slide-droite {
 
     0% {
-        transform: translateX(0%);
+        transform: translateX(-50%);
     }
 
     100% {
-        transform: translateX(-200%);
+        transform: translateX(0);
     }
 }
 
+@keyframes text-clip {
+    from {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes transition-gauche {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes transition-droite {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bas-1 {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+
+    25% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        transform: translateX(-50%) scaleX(1) ;
+    }
+
+    75% {
+        transform: translateX(-50%) rotate(0deg) scaleX(2);
+    }
+
+    100% {
+        transform: translateX(-50%)  rotate(45deg);
+    }
+}

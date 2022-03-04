@@ -1,21 +1,29 @@
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  clickable: true,
-  dynamicBullets: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
+  // Style de carroussel
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 20,
+    slideShadows: false,
   },
 
-  // Navigation arrows
+  // Paramètres supplémentaires
+  direction: 'horizontal',
+  loop: true,
+
+  // Pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true, // si on peut cliquer sur les pastilles
+    dynamicBullets: true, // permet d'avoir moins de pastilles. Utile quand le carrousel comporte beaucoup de slides.
+  },
+
+  // Flèches de navigation
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
+  // Media Queries 
   breakpoints: {
 
 		600: {
@@ -28,3 +36,4 @@ const swiper = new Swiper('.swiper', {
 		},
 	},
 });
+

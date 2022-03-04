@@ -27,11 +27,13 @@
 	<link rel="manifest" href="<?php echo site_url().'/wp-content/uploads/2022/02/site.webmanifest';?>">
 	<!-- Swiper API -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/329a0d8f65.js" crossorigin="anonymous"></script>
 	
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> style="background-image: url('<?php echo site_url().'/wp-content/uploads/2022/02/papyrus.2.1.jpg';?>');">
+<body <?php body_class(); ?> >
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'esp' ); ?></a>
@@ -55,19 +57,35 @@
 				<p class="site-description"><?php echo $esp_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?> -->
 
+			<!-- Le menu burger -->
+			<div class="menu-icon">
+				<span></span>
+				<span></span>
+			</div>
+
+			<!-- La navigation du site web -->
+			<nav class="menu-principal">
+				<ul>
+					<li><a href="#presentation">Un peu sur moi</a></li>
+					<li><a href="#lien-projet">Le court-métrage</a></li>
+					<li><a href="#inspiration">Mes inspirations</a></li>
+					<li><a href="#footer-contact">Pour me contacter</a></li>
+					<li><a href="https://www.behance.net/Sami-El-Arif" target="_blank">Mon Behance</a><i class="fa-brands fa-behance-square"></i></li>
+					<li><a href="https://www.artstation.com/sami_elarif" target="_blank">Mon ArtStation</a><i class="fa-brands fa-artstation"></i></li>
+					<li><a href="https://www.linkedin.com/in/elarifsami/" target="_blank">Mon Linkedin</a><i class="fa-brands fa-linkedin"></i></li>
+					
+				</ul>
+			</nav>
+
 			<div class="titres">
-				<h1 class="nom">
-					<div>Sami El Arif Sami El Arif Sami El Arif Sami El Arif Sami El Arif&nbsp;</div>
-					<div>&nbsp;Sami El Arif Sami El Arif Sami El Arif Sami El Arif Sami El Arif</div>
-				</h1>
-				<h1 class="projet">
-					<div>Mais qu'est-ce qu'on a fait de Poséidon ? Mais qu'est-ce qu'on a fait de Poséidon ? Mais qu'est-ce qu'on a fait de Poséidon ?&nbsp;</div>
-					<div>&nbsp;Mais qu'est-ce qu'on a fait de Poséidon ? Mais qu'est-ce qu'on a fait de Poséidon ? Mais qu'est-ce qu'on a fait de Poséidon ?</div>
+				<h1 class="nom">SAMI EL ARIF</h1>
+				<h1 class="projet" style="background-image: url('<?php echo site_url().'/wp-content/uploads/2022/02/7.1-min.png';?>');">
+					<div>Mais qu'est-ce qu'on a fait de Poséidon ? </div>
 				</h1>
 			</div>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+		<!-- <nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'esp' ); ?></button>
 			<?php
 			wp_nav_menu(
@@ -77,5 +95,7 @@
 				)
 			);
 			?>
-		</nav><!-- #site-navigation -->
+		</nav>#site-navigation -->
+		
+		
 	</header><!-- #masthead -->

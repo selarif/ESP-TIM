@@ -4,9 +4,11 @@
 
 .presentation {
     width: 100%;
+    margin-bottom: 10vh;
+
 
     .presentation-contenant {
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
@@ -17,24 +19,62 @@
             text-align: right;
             margin: 1em;
             line-height: 1.3;
-
-            h2 {
-                font-family: 'EB Garamond', serif;
-            }
+            color: #23211e;
         }
 
         .portrait {
+            width: 80em;
+            padding: 10px;
+            overflow: hidden;
+            
+            a {
+                text-decoration: none;
+            }
+
+            a:hover {
+
+                span {
+                    transform: translateY(-200px);  
+                }
+                
+            }
 
             img {
-                width: 25vw;
                 object-fit: contain;
+                transition: all 0.6s ease;
+
+                &:hover {
+                    // box-shadow: 0px 0px 0px 5px #234036;
+                    filter: blur(9px);
+                    -webkit-filter: blur(9px);
+                    -moz-filter: blur(9px);
+                }
+            }
+
+            span {
+                display: block;
+                transform: translateY(100px);
+                transition: 0.2s;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 1.5em;
+                color: #eee0cc;
+                text-align: center;
+                background-color: #23211e;
+                padding: 1rem;
             }
         }
     }
 }
 
-
-
+.parallax {
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10vh;
+}
 
 .capture {
     width: 100%;
@@ -52,23 +92,79 @@
                 object-fit: cover;
                 margin: 0 auto;
                 display: block;
+                border-radius: 5px;
             }
         }
 
         h2 {
-            font-family: 'EB Garamond', serif;
             font-size: 2em;
             text-align: center;
         }
 
         p {
             font-size: 1.5em;
-            border-left: 7px solid #332f22;
+            border-left: 7px solid #332f22 !important;
             padding-left: 10px;
         }
     }
 }
 
-.site-footer {
-    background-color: #181610;
+// Image avec l'effet de survol 3D. 
+.lien-projet {
+    position: relative;
+    display: block;
+    height: 40vh;
+    width: 60vh;
+    margin: 0 auto;
+    transition: box-shadow 0.1s, transform 0.1s;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    img {
+        border-radius: 20px 0;
+    }
+    
+    &:hover {
+
+        img {
+            box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
+            cursor: pointer;
+        }
+    }    
+
+    h3 {
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+        font-weight: 500;
+        color: #111c3a;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+
+// Classe avec le qui cache le contenu du défilement
+.js-defilement {
+    opacity: 0 !important;
+    transition: opacity 3s;
+}
+
+.js-defile {
+    opacity: 1 !important;
+
+    .transition-gauche {
+        animation: transition-gauche 1.3s forwards;
+        animation-timing-function: ease;
+    }
+
+    .transition-droite {
+        animation: transition-droite 1.3s forwards;
+        animation-timing-function: ease;
+    }
+}
+
+.transition-hauteur {
+    animation: text-clip 1s 1s;
+    animation-timing-function: ease;
 }

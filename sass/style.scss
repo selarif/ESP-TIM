@@ -38,10 +38,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "local/carrousel";
 
+/* local/navigation
+-------------------------------------------- */
+@import "local/navigation";
+
+/* local/footer
+--------------------------------------------- */
+@import "local/footer";
 
 /* local/général
 --------------------------------------------- */
 @import "local/general";
+
+/* local/général
+--------------------------------------------- */
+@import "local/accueil-inspiration";
 
 /* Abstracts/abstracts
 -------------------------------------------- */
