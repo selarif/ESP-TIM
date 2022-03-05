@@ -107,10 +107,12 @@ get_header();
 
 			<!-- La section lien du projet  -->
 			<article class="lien-projet js-defilement" id="lien-projet" >
-				<img src="http://localhost/esp/wp-content/uploads/2022/02/10-min.png" alt="">
-				<div class="contenu-lien-projet">
-					<h3>Visionnez le court-métrage dès maintenant !</h3>
-				</div>
+				<a href="https://www.youtube.com/watch?v=k81H6apGmmE" target="_blank">
+					<img src="http://localhost/esp/wp-content/uploads/2022/02/10-min.png" alt="">
+					<div class="contenu-lien-projet">
+						<h3>Visionnez le court-métrage dès maintenant !</h3>
+					</div>
+				</a>
 			</article>
 
 			<!-- La section des inspirations  -->
