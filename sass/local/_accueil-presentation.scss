@@ -6,26 +6,42 @@
     width: 100%;
     margin-bottom: 10vh;
 
-
     .presentation-contenant {
         width: 80%;
-        margin: 0 auto;
+        margin: 10vh auto 0 auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column-reverse;
         align-items: center;
 
+        @include tablet {
+            flex-direction: row;
+            margin-top: 0;
+        }
+
         .texte-presentation {
-            font-size: 1.5em;
-            text-align: right;
+            font-size: 1.2em;
+            text-align: left;
             margin: 1em;
             line-height: 1.3;
             color: #23211e;
+
+            @include tablet {
+                text-align: right;
+                font-size: 1.5em;
+
+            }
         }
 
         .portrait {
-            width: 80em;
+            width: 15em;
             padding: 10px;
             overflow: hidden;
+            height: 30vh;
+
+            @include tablet {
+                width: 80em;
+                height: auto;
+            }
             
             a {
                 text-decoration: none;
@@ -97,14 +113,22 @@
         }
 
         h2 {
-            font-size: 2em;
+            font-size: 1.6em;
             text-align: center;
+
+            @include tablet {
+                font-size: 2em;
+            }
         }
 
         p {
-            font-size: 1.5em;
-            border-left: 7px solid #332f22 !important;
-            padding-left: 10px;
+            font-size: 1.2em;
+
+            @include tablet {
+                border-left: 7px solid #332f22 !important;
+                padding-left: 10px;
+                font-size: 1.5em;
+            }
         }
     }
 }
@@ -114,14 +138,21 @@
     position: relative;
     display: block;
     height: 40vh;
-    width: 60vh;
+    width: 90%;
     margin: 0 auto;
     transition: box-shadow 0.1s, transform 0.1s;
     background-size: 100%;
     background-repeat: no-repeat;
+    overflow: visible !important;
+    
+
+    @include tablet {
+        width: 60vh;
+    }
 
     img {
         border-radius: 20px 0;
+        
     }
     
     &:hover {
@@ -139,7 +170,12 @@
         color: #111c3a;
         position: absolute;
         top: 0;
-        width: 100%;
+        padding: 10px;
+        width: 93%;
+
+        @include tablet {
+            width: 100%;
+        }
     }
 }
 
@@ -148,6 +184,7 @@
 .js-defilement {
     opacity: 0 !important;
     transition: opacity 3s;
+    overflow: hidden;
 }
 
 .js-defile {

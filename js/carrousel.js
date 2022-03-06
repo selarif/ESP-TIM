@@ -26,8 +26,10 @@ const swiper = new Swiper('.swiper', {
   // Media Queries 
   breakpoints: {
 
-		600: {
+		300: {
 			slidesPerView: 1,
+      spaceBetween: 0,
+
 		},
 
 		800: {

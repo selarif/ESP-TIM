@@ -7,7 +7,7 @@
   position: fixed;
   z-index: 6;
   top: 10em;
-  left: 90%;
+  right: 0;
   transform: translate(-50%, -50%);
   width: 70px;
   // height: 100px;
@@ -22,6 +22,10 @@
   background: rgba(200, 217, 184, 0.35);
   backdrop-filter: blur(17px);
   border-radius: 100%;
+
+  @include tablet {
+    right: 4em;
+  }
 
   span {
     position: relative;
@@ -57,13 +61,18 @@
   max-height: 0;
   -webkit-box-shadow: 0px 0px 42px 11px rgba(0,0,0,0.52); 
   box-shadow: 0px 0px 42px 11px rgba(0,0,0,0.52);
+  margin: 0;
 
   ul {
     list-style: none;
-    width: 90%;
+    width: 75%;
     text-align: right;
     transition: .45s ease-in-out;
     z-index: 5;
+
+    @include tablet {
+      width: 90%;
+    }
 
     li {
       padding: 4px 0;

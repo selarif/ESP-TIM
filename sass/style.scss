@@ -22,6 +22,12 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+
+/* Abstracts/abstracts
+-------------------------------------------- */
+@import "local/abstracts/abstracts";
+
+
 /* Local/accueil
 --------------------------------------------- */
 @import "local/accueil-banniere";
@@ -54,9 +60,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "local/accueil-inspiration";
 
-/* Abstracts/abstracts
--------------------------------------------- */
-@import "local/abstracts/abstracts";
+
 
 
 

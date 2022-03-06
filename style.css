@@ -22,6 +22,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+/* Abstracts/abstracts
+-------------------------------------------- */
+/* -----------------
+	Les couleurs
+-------------------- */
 /* Local/accueil
 --------------------------------------------- */
 /*-------------------------------------------
@@ -29,12 +34,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 .titres {
   color: #23211e !important;
-  width: 97%;
+  width: 90%;
   overflow: hidden;
   padding-top: 10vh;
   text-transform: uppercase;
   left: 0;
   margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .titres {
+    width: 95%;
+  }
 }
 
 .titres h1 {
@@ -43,8 +54,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .titres .nom {
   font-family: 'EB Garamond', serif;
-  font-size: 7em;
+  font-size: 3em;
   animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both, slide-gauche 3s 1s ease both;
+}
+
+@media (min-width: 1200px) {
+  .titres .nom {
+    font-size: 7em;
+  }
 }
 
 .titres .projet {
@@ -52,12 +69,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   animation-delay: 2s;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 8em;
-  line-height: .9;
+  font-size: 3em;
+  line-height: 1;
   text-align: right;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1200px) {
+  .titres .projet {
+    font-size: 8em;
+    line-height: .9;
+  }
 }
 
 /* local/accueil-presentation
@@ -72,24 +96,46 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .presentation .presentation-contenant {
   width: 80%;
-  margin: 0 auto;
+  margin: 10vh auto 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   align-items: center;
 }
 
+@media (min-width: 800px) {
+  .presentation .presentation-contenant {
+    flex-direction: row;
+    margin-top: 0;
+  }
+}
+
 .presentation .presentation-contenant .texte-presentation {
-  font-size: 1.5em;
-  text-align: right;
+  font-size: 1.2em;
+  text-align: left;
   margin: 1em;
   line-height: 1.3;
   color: #23211e;
 }
 
+@media (min-width: 800px) {
+  .presentation .presentation-contenant .texte-presentation {
+    text-align: right;
+    font-size: 1.5em;
+  }
+}
+
 .presentation .presentation-contenant .portrait {
-  width: 80em;
+  width: 15em;
   padding: 10px;
   overflow: hidden;
+  height: 30vh;
+}
+
+@media (min-width: 800px) {
+  .presentation .presentation-contenant .portrait {
+    width: 80em;
+    height: auto;
+  }
 }
 
 .presentation .presentation-contenant .portrait a {
@@ -153,25 +199,44 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .capture .capture-contenant h2 {
-  font-size: 2em;
+  font-size: 1.6em;
   text-align: center;
 }
 
+@media (min-width: 800px) {
+  .capture .capture-contenant h2 {
+    font-size: 2em;
+  }
+}
+
 .capture .capture-contenant p {
-  font-size: 1.5em;
-  border-left: 7px solid #332f22 !important;
-  padding-left: 10px;
+  font-size: 1.2em;
+}
+
+@media (min-width: 800px) {
+  .capture .capture-contenant p {
+    border-left: 7px solid #332f22 !important;
+    padding-left: 10px;
+    font-size: 1.5em;
+  }
 }
 
 .lien-projet {
   position: relative;
   display: block;
   height: 40vh;
-  width: 60vh;
+  width: 90%;
   margin: 0 auto;
   transition: box-shadow 0.1s, transform 0.1s;
   background-size: 100%;
   background-repeat: no-repeat;
+  overflow: visible !important;
+}
+
+@media (min-width: 800px) {
+  .lien-projet {
+    width: 60vh;
+  }
 }
 
 .lien-projet img {
@@ -190,12 +255,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   color: #111c3a;
   position: absolute;
   top: 0;
-  width: 100%;
+  padding: 10px;
+  width: 93%;
+}
+
+@media (min-width: 800px) {
+  .lien-projet h3 {
+    width: 100%;
+  }
 }
 
 .js-defilement {
   opacity: 0 !important;
   transition: opacity 3s;
+  overflow: hidden;
 }
 
 .js-defile {
@@ -298,15 +371,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   overflow: hidden;
 }
 
-.swiper .swiper-wrapper .swiper-slide {
-  width: 20vw;
+@media (min-width: 1200px) {
+  .swiper .swiper-wrapper .swiper-slide {
+    width: 20vw;
+  }
 }
 
 .swiper .swiper-wrapper .swiper-slide img {
   border-radius: 15px;
-  width: 25vw;
   height: 35vh;
   object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+  .swiper .swiper-wrapper .swiper-slide img {
+    width: 25vw;
+  }
 }
 
 .swiper .swiper-pagination .swiper-pagination-bullet-active {
@@ -328,7 +408,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   position: fixed;
   z-index: 6;
   top: 10em;
-  left: 90%;
+  right: 0;
   transform: translate(-50%, -50%);
   width: 70px;
   height: 70px;
@@ -341,6 +421,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background: rgba(200, 217, 184, 0.35);
   backdrop-filter: blur(17px);
   border-radius: 100%;
+}
+
+@media (min-width: 800px) {
+  .menu-icon {
+    right: 4em;
+  }
 }
 
 .menu-icon span {
@@ -374,14 +460,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   transition: .25s ease-in-out;
   max-height: 0;
   box-shadow: 0px 0px 42px 11px rgba(0, 0, 0, 0.52);
+  margin: 0;
 }
 
 .menu-principal ul {
   list-style: none;
-  width: 90%;
+  width: 75%;
   text-align: right;
   transition: .45s ease-in-out;
   z-index: 5;
+}
+
+@media (min-width: 800px) {
+  .menu-principal ul {
+    width: 90%;
+  }
 }
 
 .menu-principal ul li {
@@ -452,19 +545,33 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .site-footer h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 8em;
+  font-size: 5em;
   position: absolute;
   color: #0F1A16;
-  top: -200px;
+  top: -130px;
+}
+
+@media (min-width: 800px) {
+  .site-footer h1 {
+    top: -200px;
+    font-size: 8em;
+  }
 }
 
 .contenant-footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
-  align-items: flex-end;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .contenant-footer {
+    flex-direction: row;
+    align-items: flex-end;
+  }
 }
 
 .contenant-footer img {
@@ -476,12 +583,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-size: 3rem;
   color: #d4cbbe;
   margin: 5px 0;
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  .contenant-footer .contenu-contact h3 {
+    text-align: left;
+  }
 }
 
 .contenant-footer .contenu-contact ul {
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 800px) {
+  .contenant-footer .contenu-contact ul {
+    flex-wrap: nowrap;
+  }
 }
 
 .contenant-footer .contenu-contact ul a {
@@ -497,6 +619,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .contenant-footer .contenu-contact ul a:hover {
   color: #1f332c;
   background-color: #add489;
+}
+
+.contenant-footer .contenu-contact ul li {
+  margin: 20px;
+}
+
+@media (min-width: 800px) {
+  .contenant-footer .contenu-contact ul li {
+    margin: 0;
+  }
 }
 
 .contenant-footer .contenu-contact ul li:nth-child(4) a {
@@ -535,7 +667,7 @@ h2, h3, h4, h5 {
   position: absolute;
   overflow: hidden;
   z-index: -2;
-  width: 200vw;
+  width: 150%;
   height: 550vh;
   left: -50%;
   top: -50%;
@@ -565,13 +697,25 @@ h2, h3, h4, h5 {
 
 .inspiration .inspiration-contenant .inspiration-liste .inspiration-item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   padding: 1em 0;
 }
 
+@media (min-width: 800px) {
+  .inspiration .inspiration-contenant .inspiration-liste .inspiration-item {
+    flex-direction: row;
+  }
+}
+
 .inspiration .inspiration-contenant .inspiration-liste .inspiration-item:nth-child(even) {
-  flex-direction: row-reverse;
+  flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .inspiration .inspiration-contenant .inspiration-liste .inspiration-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
 }
 
 .inspiration .inspiration-contenant .inspiration-liste .inspiration-item:nth-child(even) .inspiration-image {
@@ -581,9 +725,15 @@ h2, h3, h4, h5 {
 
 .inspiration .inspiration-contenant .inspiration-liste .inspiration-item:nth-child(even) .inspiration-texte {
   margin-right: 2em;
-  text-align: right;
+  text-align: left;
   animation: transition-gauche 1.3s forwards;
   animation-timing-function: ease;
+}
+
+@media (min-width: 800px) {
+  .inspiration .inspiration-contenant .inspiration-liste .inspiration-item:nth-child(even) .inspiration-texte {
+    text-align: right;
+  }
 }
 
 .inspiration .inspiration-contenant .inspiration-liste .inspiration-item:nth-child(odd) .inspiration-image {
@@ -607,10 +757,4 @@ h2, h3, h4, h5 {
   margin-left: 2em;
   font-size: 1.4em;
 }
-
-/* Abstracts/abstracts
--------------------------------------------- */
-/* -----------------
-	Les couleurs
--------------------- */
 /*# sourceMappingURL=style.css.map */

@@ -19,14 +19,21 @@
 
           .inspiration-item {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             // border-bottom: 3px solid #23211e;
             padding: 1em 0;
             
+            @include tablet {
+              flex-direction: row;
+            }
 
             &:nth-child(even) {
-              flex-direction: row-reverse;
+              flex-direction: column;
+
+              @include tablet {
+                flex-direction: row-reverse;
+              }
 
               .inspiration-image {
                 animation: transition-droite 1.3s forwards;
@@ -35,9 +42,13 @@
 
               .inspiration-texte {
                 margin-right: 2em;
-                text-align: right;
+                text-align: left;
                 animation: transition-gauche 1.3s forwards;
                 animation-timing-function: ease;
+
+                @include tablet {
+                  text-align: right;
+                }
               
               }
             }

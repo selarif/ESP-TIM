@@ -13,13 +13,19 @@
 
     .swiper-slide {
       // margin: 10px;
-      width: 20vw;
+
+      @include desktop {
+        width: 20vw;
+      }
 
       img {
         border-radius: 15px;
-        width: 25vw;
         height: 35vh;
         object-fit: cover;
+
+        @include desktop {
+          width: 25vw;
+        }
       }
     }
   }

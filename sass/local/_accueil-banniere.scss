@@ -4,12 +4,17 @@
 
 .titres {
     color: #23211e !important;
-    width: 97%;
+    width: 90%;
     overflow: hidden;
     padding-top: 10vh;
     text-transform: uppercase;
     left: 0;
     margin: 0 auto;
+
+    @include tablet {
+        width: 95%;
+    }
+    
 
     h1 {
         margin: 0;
@@ -18,19 +23,12 @@
     // Le premier titre. Mon nom.
     .nom {
         font-family: 'EB Garamond', serif;
-        font-size: 7em;
+        font-size: 3em;
         animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both, slide-gauche 3s 1s ease both;
 
-        // div:nth-child(1) {
-        //     display: inline-block;
-        //     animation: anim-titre1a 30s linear infinite;
-        // }
-
-        // div:nth-child(2) {
-        //     display: inline-block;
-        //     animation: anim-titre1b 30s linear infinite;
-        //     animation-delay: 15s;
-        // }
+        @include desktop {
+            font-size: 7em;
+        }
     }
 
     // Le deuxième titre. Titre du projet.
@@ -39,21 +37,16 @@
         animation-delay: 2s;
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
-        font-size: 8em; 
-        line-height: .9;
+        font-size: 3em; 
+        line-height: 1;
         text-align: right;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-font-smoothing: antialiased;
 
-        // div:nth-child(1) {
-        //     display: inline-block;
-        // }
-
-        // div:nth-child(2) {
-        //     display: inline-block;
-        //     animation: anim-titre1b 30s linear infinite;
-        //     animation-delay: 15s;
-        // }
+        @include desktop {
+            font-size: 8em;
+            line-height: .9;
+        }
     }
 }
